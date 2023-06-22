@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shaghalny/View/components/core/custom_text.dart';
 
 class FinishButtonStyle {
   final ShapeBorder? shape;
@@ -93,22 +94,27 @@ class BackgroundFinalButton extends StatelessWidget {
                                 style: buttonTextStyle,
                               ),
                       )
-                    : FloatingActionButton(
-                        shape: finishButtonStyle?.shape,
-                        elevation: finishButtonStyle?.elevation,
-                        focusElevation: finishButtonStyle?.focusElevation,
-                        hoverElevation: finishButtonStyle?.hoverElevation,
-                        highlightElevation:
-                            finishButtonStyle?.highlightElevation,
-                        disabledElevation: finishButtonStyle?.disabledElevation,
-                        foregroundColor: finishButtonStyle?.foregroundColor,
-                        backgroundColor: finishButtonStyle?.backgroundColor,
-                        focusColor: finishButtonStyle?.focusColor,
-                        hoverColor: finishButtonStyle?.hoverColor,
-                        splashColor: finishButtonStyle?.splashColor,
-                        onPressed: () => _goToNextPage(context),
-                        child: skipIcon,
-                      ),
+                    : CustomText(
+                        text: "Skip >>",
+                        weight: FontWeight.w500,
+                        size: 16.sp,
+                        color: Colors.white)
+                    // : FloatingActionButton(
+                    //     shape: finishButtonStyle?.shape,
+                    //     elevation: finishButtonStyle?.elevation,
+                    //     focusElevation: finishButtonStyle?.focusElevation,
+                    //     hoverElevation: finishButtonStyle?.hoverElevation,
+                    //     highlightElevation:
+                    //         finishButtonStyle?.highlightElevation,
+                    //     disabledElevation: finishButtonStyle?.disabledElevation,
+                    //     foregroundColor: finishButtonStyle?.foregroundColor,
+                    //     backgroundColor: finishButtonStyle?.backgroundColor,
+                    //     focusColor: finishButtonStyle?.focusColor,
+                    //     hoverColor: finishButtonStyle?.hoverColor,
+                    //     splashColor: finishButtonStyle?.splashColor,
+                    //     onPressed: () => _goToNextPage(context),
+                    //     child: skipIcon,
+                    //   ),
               )
             : Container(
                 padding: EdgeInsets.symmetric(horizontal: 30),
